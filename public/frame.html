@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="page flexBox text">
+<head>
+  <link rel="stylesheet" type="text/css" href="./frame.css">
+</head>
+<body class="doc_body flexBox">
+
+  <div class="display_image flexBox">
+    <img src="kinabalu.jpg" alt="kinabalu" class="image">
+    <!-- style="width:128px;height:128px"> -->
+  </div>
+
+  <div class="wrapper flexBox left_border">
+    <div class="date_time flexBox">
+      <time class="time" id="time">
+        Time
+      </time>
+      <div class="date" id="date">
+        Date
+      </div>
+      </div>
+
+
+    <div class="weather">
+      <!-- <div w3-include-html="weather.html"></div>
+      <script>
+        includeHTML();
+      </script> -->
+      <!-- <link href="weather.html" rel="import" /> -->
+      <a class="weatherwidget-io" href="https://forecast7.com/en/n33d87151d21/sydney/" data-label_1="SYDNEY" data-label_2="WEATHER" data-theme="original" >SYDNEY WEATHER</a>
+      <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+      </script>
+    </div>
+
+  </div>
+  <script src="frame.js"></script>
+</body>
+</html>

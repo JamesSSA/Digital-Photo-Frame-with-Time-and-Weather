@@ -1,0 +1,142 @@
+
+/* .page {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid white;
+}
+
+.doc_body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%
+}
+
+.display_image {
+  max-width: 66%;
+
+  display: flex;
+  justify-content: center;
+
+  border: solid red;
+}
+
+.wrapper {
+  border: solid green;
+
+  width: 33%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date_time {
+  height: 50%;
+  border: solid blue;
+}
+
+.weather {
+  height: 50%;
+  border: solid orange;
+} */
+
+* {
+  overflow: hidden;
+  margin: 0;
+  font-family: Helvetica, Arial;
+}
+
+.flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.page {
+  /* background-color: grey;
+  background-color: rgba(30, 99, 123, 0.92); */
+  /* outline: solid white; /* TODO: debug  */
+  background-color: #1f567c;
+  min-height: 100%;
+}
+
+.text {
+  color: white;
+}
+
+.doc_body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.display_image {
+  max-width: 70%;
+  /* outline: solid red; /* TODO: debug  */
+}
+
+.wrapper {
+  /* outline: solid green;  /* TODO: debug  */
+  width: 30%;
+  align-self: stretch;
+  flex-direction: column;
+
+  /* margin-left: 2px;
+  border-style: none none none double;
+  border-left: 2px solid blue; */
+}
+
+.left_border {
+  border: 3px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(226, 226, 226, 1) 48%, rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+  margin-left: 1px;
+  margin-right: 3px;
+}
+
+.clock_wrapper {
+  flex-direction: column;
+}
+
+.date_time {
+  height: 50%;
+  width: 100%;
+  flex-direction: column;
+
+  /* outline: solid blue;   /* TODO: debug  */
+}
+
+.weather {
+  height: 50%;
+  width: 100%;
+  /* outline: solid orange;    /* TODO: debug  */
+}
+
+.image {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.time {
+  font-size: 5vw;
+}
+
+.date {
+  font-size: 2vw;
+}
+
+/*
+.flex-item {
+  align-self: flex-end;
+} */
