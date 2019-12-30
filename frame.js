@@ -38,13 +38,15 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && (this.status == 200 || this.status == 0)) {
       console.log("Ready ");
+      console.log(this.responseText);
       _global["images"] = JSON.parse(this.responseText);
       _global["changes"] = 0;
       _global["length"] = _global["images"].length;
       console.log("images = " + _global["images"][0]);
     }
   };
-  xhttp.open("GET", "photos.py", true);
+  // xhttp.open("GET", "photos.py", true);
+  xhttp.open("GET", "images.json", true);
   xhttp.send();
 }
 
@@ -52,7 +54,7 @@ function loadDoc() {
 * Updates the photo to the next one in the directory or start from the begining.
 */
 function rotate_photos(){
-  console.log("rotate");
+  // console.log(_global["changes"]);
   if (_global["changes"]){
     let index = _global["changes"];
     if (index >= _global["length"]) {
@@ -61,8 +63,10 @@ function rotate_photos(){
     let next_img = _global["images"][index];
     console.log("/digitalFrame/photos/" + next_img);
     document.getElementById("image").src = "/digitalFrame/photos/" + next_img; // TODO: Update so path can be changed at any point once.
+    console.log("Next image = " + document.getElementById("image").src);
     ++_global["changes"];
   }
+  setInterval(rotate_photos, 3000);
 }
 
 /**
