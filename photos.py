@@ -1,7 +1,8 @@
 import json
 import glob
+import os
 
-usr_path = "/home/james/Programs/digitalFrame/"
+usr_path = os.getcwd() + "/"
 dir = usr_path + "photos/"
 def getImages():
     file_types = [dir + "*.jpg", dir +  "*.png", dir +  "*.svg", dir + "*.tif"]

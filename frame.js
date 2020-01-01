@@ -62,6 +62,7 @@ function rotate_photos(){
     console.log(index + " = index; changes = " + _global["changes"]);
     if (index >= _global["length"]) {
       _global["changes"] = 0;
+      index = 0;
     }
     let next_img = _global["images"][index];
     document.getElementById("image").src = next_img;
@@ -74,7 +75,7 @@ function rotate_photos(){
 * Sets the clock time.
 */
 function setTime() {
-  let secondsOn = true;
+  let secondsOn = false;
   let today = new Date();
   let hour = addLeadingZero(today.getHours());
   let minute = addLeadingZero(today.getMinutes());
