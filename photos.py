@@ -3,7 +3,8 @@ import glob
 import os
 
 usr_path = os.getcwd() + "/"
-dir = usr_path + "photos/"
+dir = usr_path + "../usb/photos/"
+print(dir)
 def getImages():
     file_types = [dir + "*.jpg", dir +  "*.png", dir +  "*.svg", dir + "*.tif"]
     files = []
