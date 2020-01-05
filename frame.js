@@ -12,7 +12,7 @@ function loadDoc() {
       _global["images"] = JSON.parse(this.responseText);
       _global["changes"] = 0;
       _global["length"] = _global["images"].length;
-      setInterval(rotate_photos, 20000);
+      setInterval(rotate_photos, 180000); //3min
     }
   };
   // xhttp.open("GET", "photos.py", true);
